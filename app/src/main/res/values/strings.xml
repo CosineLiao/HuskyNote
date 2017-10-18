@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">HuskyNote</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="host_address">Host address</string>
+    <string name="use_custom_host">Use Custom host</string>
+    <string name="use_leanote_com">Use Leanote.com</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="illegal_host">Illegal host, please check again</string>
+    <string name="delete_network_error">Network is unavailablle, these notes will be delete in nexr ansy</string>
+    <string name="network_error">Network Error</string>
 </resources>

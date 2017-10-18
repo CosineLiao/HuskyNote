@@ -1,7 +1,9 @@
-package husky.note.huskynote;
+package husky.note.huskynote.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import husky.note.huskynote.R;
 
 public class MainActivity extends AppCompatActivity
 {
