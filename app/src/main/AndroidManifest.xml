@@ -3,13 +3,14 @@
           package="husky.note.huskynote">
 
     <application
+        android:name=".HuskyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.LaunchActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ui.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,6 +20,8 @@
         <activity android:name=".ui.MainActivity">
         </activity>
         <activity android:name=".ui.LoginActivity">
+        </activity>
+        <activity android:name=".ui.SearchActivity">
         </activity>
     </application>
 

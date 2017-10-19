@@ -6,4 +6,6 @@
     <color name="colorblue">#84c8fd</color>
     <color name="hint_text_light">#61000000</color>
     <color name="lightGray">#EEEEEE</color>
+    <color name="toolbar">#1f8ab7</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

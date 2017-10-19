@@ -11,4 +11,6 @@
     <string name="illegal_host">Illegal host, please check again</string>
     <string name="delete_network_error">Network is unavailablle, these notes will be delete in nexr ansy</string>
     <string name="network_error">Network Error</string>
+    <string name="search">search</string>
+    <string name="view_type">view type</string>
 </resources>

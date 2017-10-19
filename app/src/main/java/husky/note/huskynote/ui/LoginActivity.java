@@ -1,5 +1,6 @@
 package husky.note.huskynote.ui;
 
+import android.content.Intent;
 import android.database.Observable;
 import android.os.Bundle;
 import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
@@ -9,6 +10,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +24,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import husky.note.huskynote.R;
 import husky.note.huskynote.model.Authentication;
+import husky.note.huskynote.model.BaseResponse;
 import husky.note.huskynote.service.AccountService;
 import rx.Observer;
 import rx.Scheduler;
@@ -32,7 +35,7 @@ import rx.functions.Func1;
 import rx.observables.AsyncOnSubscribe;
 import rx.schedulers.Schedulers;
 
-public class LoginActivity extends AppCompatActivity implements TextWatcher
+public class LoginActivity extends BaseActivity implements TextWatcher
 {
 
     public static final String ACTION_ADD_ACCOUNT = "action_addAccount:";
@@ -74,6 +77,7 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
@@ -95,7 +99,6 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher
 
         etHostAddress.setScaleY(isCustomHost ? 1 : 0);
        // etHostAddress.setText(host);
-
     }
 
     @OnClick({R.id.btn_sign_up, R.id.btn_sign_in, R.id.layout_btn, R.id.tv_forget_password, R.id.tv_use_leanote_com})
@@ -107,7 +110,9 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher
                 onClickSignUp();
                 break;
             case R.id.btn_sign_in:
-                onClickSignIn();
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
+                //onClickSignIn();
                 break;
             case R.id.layout_btn:
                 break;
