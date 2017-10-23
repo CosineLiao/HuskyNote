@@ -2,6 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_other_8"
+              android:id="@+id/item_container"
+    >
+    <TextView
+        android:id="@+id/tv_note_title"
+        style="@style/NoteTitle"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scrolling_text"
+        android:layout_marginTop="@dimen/margin_other_8"
+        android:layout_marginRight="4dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scrolling_text"
+        android:layout_marginTop="@dimen/margin_other_8"
+        android:layout_marginRight="4dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scrolling_text"
+        android:layout_marginTop="@dimen/margin_other_8"
+        android:layout_marginRight="4dp"
+        />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_other_8"
+        android:background="@color/lightGray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_other_8">
+        <TextView
+            android:id="@+id/tv_note_edit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-23 16:38"
+            android:textSize="@dimen/note_item_time_text_size"/>
+        <TextView
+            android:id="@+id/tv_note_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Android 控件"
+            android:textSize="@dimen/note_item_time_text_size"/>
+    </RelativeLayout>
 </LinearLayout>

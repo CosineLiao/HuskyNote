@@ -2,6 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
+              android:layout_height="wrap_content"
+              android:padding="@dimen/margin_other_8"
+              android:id="@+id/item_container"
+    >
+    <TextView
+        android:id="@+id/tv_note_title"
+        style="@style/NoteTitle"
+        />
+    <TextView
+        android:id="@+id/tv_note_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_other_8"
+        android:text="ActionBar\n\n方法\n\nsetDisplayHomeAsUpEnable(boolean showHomeAsUp);\n给ActionBar添加返回按钮，也就是返回上一级的按钮。showHomeAsUp=true为添加返回按钮，false为不添加返回按钮.
+        默认按钮的图标为一个黑色向左的箭头，若想自定义图标，可与下一个方法结合使用。
+        setHomeAsUpIndicator(int resId);"
+        android:layout_marginTop="@dimen/margin_other_8"
+        android:maxLines="6"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGray"
+        android:layout_marginTop="@dimen/margin_other_8"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_other_8">
+        <TextView
+            android:id="@+id/tv_note_edit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-23 16:27"
+            android:textSize="@dimen/note_item_time_text_size"
+            />
+        <TextView
+            android:id="@+id/tv_note_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Android 控件"
+            android:textSize="@dimen/note_item_time_text_size"
+            />
+    </RelativeLayout>
 </LinearLayout>

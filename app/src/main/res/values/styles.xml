@@ -27,7 +27,16 @@
         <item name="android:background">#1783b0</item>
         <item name="android:textColor">@color/lightGray</item>
         <item name="android:textAllCaps">false</item>
+    </style>
 
+    <style name="NoteTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/note_item_title_text_size</item>
+        <item name="android:text">@string/untitled</item>
+        <item name="android:layout_marginTop">@dimen/margin_other_8</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginRight">@dimen/margin_other_8</item>
     </style>
 
 </resources>

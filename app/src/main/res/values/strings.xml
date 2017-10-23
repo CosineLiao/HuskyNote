@@ -13,4 +13,7 @@
     <string name="network_error">Network Error</string>
     <string name="search">search</string>
     <string name="view_type">view type</string>
+    <string name="untitled">Untitled</string>
+    <string name="time_yesterday">Yesterday %s</string>
+    <string name="content_text"></string>
 </resources>

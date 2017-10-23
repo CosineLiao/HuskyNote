@@ -16,22 +16,26 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import husky.note.huskynote.R;
+import husky.note.huskynote.adapter.NoteAdapter;
+import husky.note.huskynote.model.Note;
+import husky.note.huskynote.widget.NoteList;
 
 /**
  * Created by Administrator on 2017/10/19.
  */
 
-public class NoteFragment extends Fragment
+public class NoteFragment extends Fragment implements NoteAdapter.NoteAdapterListener
 {
     private static final String TAG = "NoteFragment";
 
     private static NoteFragment noteFragment;
     @BindView(R.id.recycler_view)
-    RecyclerView mNoteListView;
+    RecyclerView mRecyclerView;
 
     Unbinder unbinder;
 
     private View contentView;
+    private NoteList mNoteList;
 
     public static NoteFragment getInstance()
     {
@@ -75,7 +79,8 @@ public class NoteFragment extends Fragment
     {
         contentView = inflater.inflate(R.layout.fragment_note, container, false);
         unbinder = ButterKnife.bind(this, contentView);
-
+        mNoteList = new NoteList(contentView.getContext(), mRecyclerView, this);
+        mNoteList.setType(NoteList.DEFAULT_TYPE);
         return contentView;
     }
 
@@ -87,5 +92,26 @@ public class NoteFragment extends Fragment
     {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void onClickNote(Note note)
+    {
+
+    }
+
+    @Override
+    public void onLongClickNote(Note note)
+    {
+
     }
 }
